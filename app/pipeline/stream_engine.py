@@ -66,3 +66,4 @@ class KafkaStreamSimulator:
             "events_per_second": round(throughput, 2),
             "status": "PASS" if throughput >= 15000 else "DEGRADED"
         }
+

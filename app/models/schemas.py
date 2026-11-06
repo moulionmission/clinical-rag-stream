@@ -28,3 +28,4 @@ class RAGQueryResponse(BaseModel):
     answer: str
     retrieved_contexts: List[Dict[str, Any]]
     confidence_score: float
+

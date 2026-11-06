@@ -52,3 +52,4 @@ def test_rag_query_workflow():
 
     assert len(response.retrieved_contexts) == 1
     assert "beta blockers" in response.retrieved_contexts[0]["context_snippet"]
+

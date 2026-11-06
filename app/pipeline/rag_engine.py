@@ -42,3 +42,4 @@ class ClinicalRAGEngine:
             retrieved_contexts=contexts,
             confidence_score=confidence
         )
+

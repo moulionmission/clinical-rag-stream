@@ -9,3 +9,4 @@ services:
       - ENVIRONMENT=production
       - VECTOR_DIMENSION=64
     restart: unless-stopped
+
