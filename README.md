@@ -13,13 +13,13 @@ A scalable, event-driven clinical data ingestion and Retrieval-Augmented Generat
 
 ```mermaid
 flowchart LR
-    EHR[Hospital EHR Stream] -->|Kafka Producer| Topic[Kafka Topic: clinical-notes]
-    Topic -->|15,000+ msg/sec| Ingest[Stream Ingestion Workers]
-    Ingest --> Masker[HIPAA PII De-Identification]
-    Masker -->|Anonymized Records| VectorStore[(Pinecone Vector DB / Index)]
-    Doctor[Physician / LLM Agent] -->|Clinical Inquiry| RAGService[FastAPI RAG Engine]
-    VectorStore -->|Top-K Context Embeddings| RAGService
-    RAGService -->|Grounded Summary + Citations| Doctor
+    EHR["Hospital EHR Stream"] -->|"Kafka Producer"| Topic["Kafka Topic: clinical-notes"]
+    Topic -->|"15,000+ msg/sec"| Ingest["Stream Ingestion Workers"]
+    Ingest --> Masker["HIPAA PII De-Identification"]
+    Masker -->|"Anonymized Records"| VectorStore[("Pinecone Vector DB / Index")]
+    Doctor["Physician / LLM Agent"] -->|"Clinical Inquiry"| RAGService["FastAPI RAG Engine"]
+    VectorStore -->|"Top-K Context Embeddings"| RAGService
+    RAGService -->|"Grounded Summary + Citations"| Doctor
 ```
 
 ---
